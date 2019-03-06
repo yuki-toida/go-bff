@@ -1,0 +1,10 @@
+[DB]
+user = "root"
+password = "root"
+host = "127.0.0.1"
+port = "13306"
+name = "test_db"
+
+[Email]
+host = "localhost"
+port = "8081"

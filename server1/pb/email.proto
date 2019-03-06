@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = "pb_email";
+
+package proto;
+
+service Email {
+  rpc Build (BuildRequest) returns (BuildResponse);
+  rpc Reverse (ReverseRequest) returns (ReverseResponse);
+}
+
+message BuildRequest {
+  string Email = 1;
+}
+
+message BuildResponse {
+  string EmailAddress = 1;
+}
+
+message ReverseRequest {
+  string Email = 1;
+}
+
+message ReverseResponse {
+  string EmailAddress = 1;
+}
