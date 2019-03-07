@@ -8,7 +8,7 @@ import (
 	"github.com/gorilla/mux"
 	"go-bff/bff/adapter/microservices/microservice_email"
 	"go-bff/bff/application/usecase/usecase_email"
-	"go-bff/server1/pb"
+	"go-bff/email/pb"
 	"net/http"
 	"strconv"
 )
@@ -22,12 +22,11 @@ func MakeFirstEndpoint(u usecase_email.UseCase, es microservice_email.Service, c
 			return nil, err
 		}
 
-		ereq := &pb_email.ReverseRequest{Email: email.Email}
-		eres, err := es.Reverse(ctx, ereq)
+		res, err := es.Reverse(ctx, &pb_email.ReverseRequest{Email: email.Email})
 		if err != nil {
 			return nil, err
 		}
-		email.Email = eres.EmailAddress
+		email.Email = res.EmailAddress
 
 		return email, nil
 	}
@@ -46,14 +45,13 @@ func MakeUpdateEndpoint(u usecase_email.UseCase, es microservice_email.Service, 
 	return func(_ context.Context, request interface{}) (interface{}, error) {
 		req := request.(updateRequest)
 
-		ereq := &pb_email.BuildRequest{Email: req.Email}
-		eres, err := es.Build(ctx, ereq)
+		res, err := es.Build(ctx, &pb_email.BuildRequest{Email: req.Email})
 		if err != nil {
 			return nil, err
 		}
 
 		emailID, _ := strconv.Atoi(req.ID)
-		email, err := u.Update(uint64(emailID), eres.EmailAddress)
+		email, err := u.Update(uint64(emailID), res.EmailAddress)
 		if err != nil {
 			return nil, err
 		}

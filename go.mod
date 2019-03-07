@@ -10,6 +10,7 @@ require (
 	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gofrs/uuid v3.2.0+incompatible // indirect
+	github.com/golang/mock v1.1.1
 	github.com/golang/protobuf v1.3.0
 	github.com/google/go-cmp v0.2.0 // indirect
 	github.com/gorilla/mux v1.7.0
@@ -19,5 +20,6 @@ require (
 	github.com/lib/pq v1.0.0 // indirect
 	github.com/mattn/go-sqlite3 v1.10.0 // indirect
 	github.com/spf13/viper v1.3.1
+	github.com/stretchr/testify v1.2.2
 	google.golang.org/grpc v1.19.0
 )

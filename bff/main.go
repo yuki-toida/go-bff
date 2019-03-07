@@ -37,7 +37,7 @@ func main() {
 		}
 	}
 
-	emailconn := microservices.Connect(c.Email.Host, c.Email.Port)
+	emailconn := microservices.Connect(c.EmailService.Host, c.EmailService.Port)
 	defer emailconn.Close()
 
 	repositories := registry.NewRepositories(db)
@@ -50,5 +50,4 @@ func main() {
 	logger := log.NewLogfmtLogger(os.Stderr)
 	logger.Log("msg", "HTTP", "addr", port)
 	logger.Log("err", http.ListenAndServe(port, handler))
-
 }

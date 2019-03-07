@@ -7,6 +7,7 @@ func Load() Config {
 	viper.SetConfigType("toml")
 	viper.AddConfigPath("./bff")
 	viper.AutomaticEnv()
+
 	if err := viper.ReadInConfig(); err != nil {
 		panic(err)
 	}
@@ -21,14 +22,14 @@ func Load() Config {
 
 type Config struct {
 	DB struct {
-		User     string
-		Password string
-		Host     string
-		Port     string
-		Name     string
+		User     string `mapstructure:"user"`
+		Password string `mapstructure:"password"`
+		Host     string `mapstructure:"host"`
+		Port     string `mapstructure:"port"`
+		Name     string `mapstructure:"name"`
 	}
-	Email struct {
-		Host string
-		Port string
+	EmailService struct {
+		Host string `mapstructure:"host"`
+		Port string `mapstructure:"port"`
 	}
 }

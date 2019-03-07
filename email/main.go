@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/go-kit/kit/log"
-	"go-bff/server1/pb"
+	"go-bff/email/pb"
 	"google.golang.org/grpc"
 	"net"
 	"os"
@@ -22,7 +22,6 @@ func main() {
 
 	server := grpc.NewServer()
 	pb_email.RegisterEmailServer(server, &Server{})
-
 	logger.Log("err", server.Serve(grpcListener))
 }
 

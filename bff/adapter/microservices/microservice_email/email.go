@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/go-kit/kit/endpoint"
 	grpctransport "github.com/go-kit/kit/transport/grpc"
-	"go-bff/server1/pb"
+	"go-bff/email/pb"
 	"google.golang.org/grpc"
 )
 
