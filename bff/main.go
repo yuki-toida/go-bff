@@ -37,14 +37,11 @@ func main() {
 		}
 	}
 
-	emailconn := microservices.Connect(c.EmailService.Host, c.EmailService.Port)
-	defer emailconn.Close()
+	emailConn := microservices.Connect(c.EmailService.Host, c.EmailService.Port)
+	defer emailConn.Close()
 
-	repositories := registry.NewRepositories(db)
-	usecases := registry.NewUseCases(repositories)
-	cxt := context.Background()
-	microservices := registry.NewMicroServices(emailconn)
-	handler := web.Handle(usecases, microservices, cxt)
+	reg := registry.New(db, context.Background(), emailConn)
+	handler := web.Handle(reg)
 
 	port := ":8080"
 	logger := log.NewLogfmtLogger(os.Stderr)

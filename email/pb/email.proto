@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "pb_email";
+option go_package = "pb";
 
 package proto;
 

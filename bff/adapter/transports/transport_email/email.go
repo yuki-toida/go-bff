@@ -22,7 +22,7 @@ func MakeFirstEndpoint(u usecase_email.UseCase, es microservice_email.Service, c
 			return nil, err
 		}
 
-		res, err := es.Reverse(ctx, &pb_email.ReverseRequest{Email: email.Email})
+		res, err := es.Reverse(ctx, &pb.ReverseRequest{Email: email.Email})
 		if err != nil {
 			return nil, err
 		}
@@ -45,7 +45,7 @@ func MakeUpdateEndpoint(u usecase_email.UseCase, es microservice_email.Service, 
 	return func(_ context.Context, request interface{}) (interface{}, error) {
 		req := request.(updateRequest)
 
-		res, err := es.Build(ctx, &pb_email.BuildRequest{Email: req.Email})
+		res, err := es.Build(ctx, &pb.BuildRequest{Email: req.Email})
 		if err != nil {
 			return nil, err
 		}

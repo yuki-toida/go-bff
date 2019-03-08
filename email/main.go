@@ -21,21 +21,21 @@ func main() {
 	defer grpcListener.Close()
 
 	server := grpc.NewServer()
-	pb_email.RegisterEmailServer(server, &Server{})
+	pb.RegisterEmailServer(server, &Server{})
 	logger.Log("err", server.Serve(grpcListener))
 }
 
 type Server struct{}
 
-func (s *Server) Build(_ context.Context, r *pb_email.BuildRequest) (*pb_email.BuildResponse, error) {
+func (s *Server) Build(_ context.Context, r *pb.BuildRequest) (*pb.BuildResponse, error) {
 	address := r.Email + "@hacobu.jp"
-	return &pb_email.BuildResponse{EmailAddress: address}, nil
+	return &pb.BuildResponse{EmailAddress: address}, nil
 }
 
-func (s *Server) Reverse(_ context.Context, r *pb_email.ReverseRequest) (*pb_email.ReverseResponse, error) {
+func (s *Server) Reverse(_ context.Context, r *pb.ReverseRequest) (*pb.ReverseResponse, error) {
 	runes := []rune(r.Email)
 	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
 		runes[i], runes[j] = runes[j], runes[i]
 	}
-	return &pb_email.ReverseResponse{EmailAddress: string(runes)}, nil
+	return &pb.ReverseResponse{EmailAddress: string(runes)}, nil
 }
