@@ -45,6 +45,12 @@ func main() {
 
 	port := ":8080"
 	logger := log.NewLogfmtLogger(os.Stderr)
-	logger.Log("msg", "HTTP", "addr", port)
-	logger.Log("err", http.ListenAndServe(port, handler))
+
+	if err := logger.Log("msg", "HTTP", "addr", port); err != nil {
+		panic(err)
+	}
+	if err := logger.Log("err", http.ListenAndServe(port, handler)); err != nil {
+		panic(err)
+	}
+
 }

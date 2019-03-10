@@ -15,14 +15,16 @@ func main() {
 	// The gRPC listener mounts the Go kit gRPC server we created.
 	grpcListener, err := net.Listen("tcp", ":8081")
 	if err != nil {
-		logger.Log("transport", "gRPC", "during", "Listen", "err", err)
 		os.Exit(1)
 	}
 	defer grpcListener.Close()
 
 	server := grpc.NewServer()
 	pb.RegisterEmailServer(server, &Server{})
-	logger.Log("err", server.Serve(grpcListener))
+	if err := logger.Log("err", server.Serve(grpcListener)); err != nil {
+		panic(err)
+	}
+
 }
 
 type Server struct{}

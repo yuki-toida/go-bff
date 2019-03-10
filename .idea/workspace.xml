@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3b550d3-2e8f-4591-a35a-4a7ac4e5bd09" name="Default Changelist" comment="add testing">
-      <change beforePath="$PROJECT_DIR$/bff/external/web/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/external/web/handler.go" afterDir="false" />
+    <list default="true" id="c3b550d3-2e8f-4591-a35a-4a7ac4e5bd09" name="Default Changelist" comment="refactor regstry">
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bff/registry/registry.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/registry/registry.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/email/main.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,24 +19,36 @@
     <favorites_list name="go-bff" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bff/registry/registry.go">
+        <entry file="file://$PROJECT_DIR$/bff/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="258">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="e#14#439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/email/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#14#122#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bff/external/web/handler.go">
+        <entry file="file://$PROJECT_DIR$/bff/registry/registry.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-              <folding>
-                <element signature="e#13#259#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="316">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -107,11 +122,9 @@
         <option value="$PROJECT_DIR$/bff/domain/entities/entity_email/email.go" />
         <option value="$PROJECT_DIR$/bff/registry/interfaces/usecase.go" />
         <option value="$PROJECT_DIR$/bff/registry/interfaces/repository.go" />
-        <option value="$PROJECT_DIR$/bff/main.go" />
         <option value="$PROJECT_DIR$/bff/application/usecase/usecase_email/email_mock.go" />
         <option value="$PROJECT_DIR$/email/pb/email.pb.go" />
         <option value="$PROJECT_DIR$/email/pb/email.proto" />
-        <option value="$PROJECT_DIR$/email/main.go" />
         <option value="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email_test.go" />
         <option value="$PROJECT_DIR$/email/pb/email_test.go" />
         <option value="$PROJECT_DIR$/bff/domain/entities/entity_email/email_test.go" />
@@ -122,15 +135,16 @@
         <option value="$PROJECT_DIR$/bff/application/usecase/usecase_email/mock_usecase_email/mock_email.go" />
         <option value="$PROJECT_DIR$/_mockgen.sh" />
         <option value="$PROJECT_DIR$/bff/adapter/transports/transport_email/email_test.go" />
-        <option value="$PROJECT_DIR$/bff/registry/registry.go" />
         <option value="$PROJECT_DIR$/bff/external/web/handler.go" />
+        <option value="$PROJECT_DIR$/bff/main.go" />
+        <option value="$PROJECT_DIR$/email/main.go" />
+        <option value="$PROJECT_DIR$/bff/registry/registry.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="160" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1440" />
     <option name="height" value="852" />
   </component>
   <component name="ProjectView">
@@ -138,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,75 +168,28 @@
               <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
               <item name="go-bff" type="462c0819:PsiDirectoryNode" />
               <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-              <item name="transports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-              <item name="transports" type="462c0819:PsiDirectoryNode" />
-              <item name="transport_email" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="entity_email" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
               <item name="registry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552194763578" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552221681108" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -314,7 +279,9 @@
       <workItem from="1551772337197" duration="14522000" />
       <workItem from="1551858783947" duration="7252000" />
       <workItem from="1551918767333" duration="30330000" />
-      <workItem from="1552037429498" duration="1424000" />
+      <workItem from="1552037429498" duration="2020000" />
+      <workItem from="1552219164478" duration="21000" />
+      <workItem from="1552219205532" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551854846885</created>
@@ -330,7 +297,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551936126585</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor regstry">
+      <created>1552194784631</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552194784631</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactor regstry">
+      <created>1552194795756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1552194795756</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -342,13 +323,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53528000" />
+    <option name="totallyTimeSpent" value="54791000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="852" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="852" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990403" visible="true" weight="0.16237482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990403" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -357,8 +338,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.5009597" side_tool="true" weight="0.18093699" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32824427" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4089422" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32700136" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4084125" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -384,20 +365,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="add unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unit test" />
+    <MESSAGE value="refactor regstry" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor regstry" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/Cellar/go/1.12/libexec/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="692" column="16" lean-forward="true" selection-start-line="692" selection-start-column="16" selection-end-line="692" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/go/pkg/mod/github.com/golang/mock@v1.1.1/gomock/matchers.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -464,16 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#122#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bff/application/interactors/interactor_email/email_test.go" />
     <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_email/mock_usecase_email/mock_email.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -673,30 +631,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bff/external/web/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <folding>
+            <element signature="e#13#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/go-kit/kit@v0.8.0/log/log.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bff/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        <state relative-caret-position="258">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#14#439#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bff/registry/registry.go">
+    <entry file="file://$PROJECT_DIR$/email/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="203">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#14#122#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bff/external/web/handler.go">
+    <entry file="file://$PROJECT_DIR$/bff/registry/registry.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          <folding>
-            <element signature="e#13#259#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="316">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
