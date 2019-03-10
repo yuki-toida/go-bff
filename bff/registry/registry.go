@@ -15,10 +15,18 @@ import (
 )
 
 type Registry struct {
-	UserUseCase  usecase_user.UseCase
-	EmailUseCase usecase_email.UseCase
-	Context      context.Context
-	EmailService microservice_email.Service
+	Context       context.Context
+	UseCases      useCases
+	MicroServices microServices
+}
+
+type useCases struct {
+	User  usecase_user.UseCase
+	Email usecase_email.UseCase
+}
+
+type microServices struct {
+	Email microservice_email.Service
 }
 
 func New(db *gorm.DB, ctx context.Context, emailConn *grpc.ClientConn) *Registry {
@@ -27,9 +35,13 @@ func New(db *gorm.DB, ctx context.Context, emailConn *grpc.ClientConn) *Registry
 	er := repository_email.New(db)
 
 	return &Registry{
-		UserUseCase:  interactor_user.New(ur, pr, er),
-		EmailUseCase: interactor_email.New(er),
-		Context:      ctx,
-		EmailService: microservice_email.New(emailConn),
+		Context: ctx,
+		UseCases: useCases{
+			User:  interactor_user.New(ur, pr, er),
+			Email: interactor_email.New(er),
+		},
+		MicroServices: microServices{
+			Email: microservice_email.New(emailConn),
+		},
 	}
 }
