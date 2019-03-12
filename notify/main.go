@@ -24,7 +24,6 @@ func main() {
 	if err := logger.Log("err", server.Serve(grpcListener)); err != nil {
 		panic(err)
 	}
-
 }
 
 type Server struct{}
