@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3b550d3-2e8f-4591-a35a-4a7ac4e5bd09" name="Default Changelist" comment="refactor regstry">
+    <list default="true" id="c3b550d3-2e8f-4591-a35a-4a7ac4e5bd09" name="Default Changelist" comment="golangcli-lint">
+      <change afterPath="$PROJECT_DIR$/bff/domain/entities/entity_notify/notify_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_mockgen.sh" beforeDir="false" afterPath="$PROJECT_DIR$/_mockgen.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/gateways/api/api_notify/notify.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/mock_microservice_email/mock_email.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/repositories/repository_email/email.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/gateways/db/db_email/email.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/repositories/repository_profile/profile.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/gateways/db/db_profile/profile.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/repositories/repository_user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/gateways/db/db_user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/transports/transport_email/email.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/controllers/controller_email/email.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/transports/transport_email/email_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/controllers/controller_email/email_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/adapter/transports/transport_user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/adapter/controllers/controller_user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/application/interactors/interactor_email/email.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/application/interactors/interactor_email/email.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/bff/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/external/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/external/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/external/microservices/microservices.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/external/grpc/connect.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/external/web/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/external/web/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bff/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bff/registry/registry.go" beforeDir="false" afterPath="$PROJECT_DIR$/bff/registry/registry.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/email/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/_build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/notify/_build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/notify/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/pb/email.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/pb/email.proto" beforeDir="false" afterPath="$PROJECT_DIR$/notify/pb/notify.proto" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,40 +33,51 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="go-bff" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bff/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="348">
+              <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding>
-                <element signature="e#14#439#0" expanded="true" />
+                <element signature="e#14#403#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/email/main.go">
+        <entry file="file://$PROJECT_DIR$/bff/external/web/handler.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#14#122#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="384">
+              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bff/registry/registry.go">
+        <entry file="file://$PROJECT_DIR$/bff/external/config/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="496">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -77,13 +106,18 @@
       <find>pb_email</find>
       <find>Build</find>
       <find>Build(</find>
-      <find>interface</find>
       <find>gorilla</find>
       <find>mux</find>
+      <find>dbemail</find>
+      <find>microservice_email.Service</find>
+      <find>microservice_email</find>
+      <find>UseCases.User</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;go-bff/bff/</replace>
       <replace>pb</replace>
+      <replace>entity_notify.Service</replace>
+      <replace>UserUseCase</replace>
     </replaceStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.12/libexec" />
@@ -96,16 +130,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bff/application/interactors/interactor_email/email.go" />
-        <option value="$PROJECT_DIR$/bff/application/interactors/interactor_user/user.go" />
-        <option value="$PROJECT_DIR$/bff/application/usecase/usecase_email/email.go" />
-        <option value="$PROJECT_DIR$/bff/application/usecase/usecase_user/user.go" />
-        <option value="$PROJECT_DIR$/bff/registry/repositories.go" />
         <option value="$PROJECT_DIR$/bff/adapter/repositories/repository_profile/profile.go" />
-        <option value="$PROJECT_DIR$/bff/adapter/repositories/repository_email/email.go" />
         <option value="$PROJECT_DIR$/bff/adapter/repositories/repository_user/user.go" />
         <option value="$PROJECT_DIR$/bff/adapter/transports/transport_user/user.go" />
-        <option value="$PROJECT_DIR$/bff/domain/entities/entity_profile/profile.go" />
         <option value="$PROJECT_DIR$/bff/domain/entities/entity_user/user_repository.go" />
         <option value="$PROJECT_DIR$/bff/domain/entities/entity_user/user.go" />
         <option value="$PROJECT_DIR$/bff/external/microservices/email.go" />
@@ -115,11 +142,8 @@
         <option value="$PROJECT_DIR$/server1/pb/email.proto" />
         <option value="$PROJECT_DIR$/bff/external/microservices/microservices.go" />
         <option value="$PROJECT_DIR$/server1/main.go" />
-        <option value="$PROJECT_DIR$/bff/config.toml" />
-        <option value="$PROJECT_DIR$/bff/external/config/config.go" />
         <option value="$PROJECT_DIR$/bff/external/mysql/connection.go" />
         <option value="$PROJECT_DIR$/bff/registry/usecases.go" />
-        <option value="$PROJECT_DIR$/bff/domain/entities/entity_email/email.go" />
         <option value="$PROJECT_DIR$/bff/registry/interfaces/usecase.go" />
         <option value="$PROJECT_DIR$/bff/registry/interfaces/repository.go" />
         <option value="$PROJECT_DIR$/bff/application/usecase/usecase_email/email_mock.go" />
@@ -128,17 +152,35 @@
         <option value="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email_test.go" />
         <option value="$PROJECT_DIR$/email/pb/email_test.go" />
         <option value="$PROJECT_DIR$/bff/domain/entities/entity_email/email_test.go" />
-        <option value="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email.go" />
         <option value="$PROJECT_DIR$/bff/adapter/transports/transport_email/email.go" />
         <option value="$PROJECT_DIR$/_test.sh" />
         <option value="$PROJECT_DIR$/bff/application/interactors/interactor_email/email_test.go" />
         <option value="$PROJECT_DIR$/bff/application/usecase/usecase_email/mock_usecase_email/mock_email.go" />
-        <option value="$PROJECT_DIR$/_mockgen.sh" />
         <option value="$PROJECT_DIR$/bff/adapter/transports/transport_email/email_test.go" />
-        <option value="$PROJECT_DIR$/bff/external/web/handler.go" />
-        <option value="$PROJECT_DIR$/bff/main.go" />
         <option value="$PROJECT_DIR$/email/main.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email_service.go" />
+        <option value="$PROJECT_DIR$/bff/domain/entities/entity_email/email.go" />
+        <option value="$PROJECT_DIR$/bff/domain/entities/entity_email/email_repository.go" />
+        <option value="$PROJECT_DIR$/bff/domain/entities/entity_profile/profile_repository.go" />
+        <option value="$PROJECT_DIR$/bff/domain/entities/entity_profile/profile.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/repositories/repository_email/email.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/gateways/api/email/email.go" />
+        <option value="$PROJECT_DIR$/notify/main.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/gateways/db/db_user/user.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/gateways/db/db_profile/profile.go" />
+        <option value="$PROJECT_DIR$/_mockgen.sh" />
+        <option value="$PROJECT_DIR$/bff/adapter/gateways/api/notify/notify.go" />
+        <option value="$PROJECT_DIR$/bff/config.toml" />
+        <option value="$PROJECT_DIR$/bff/application/interactors/interactor_email/email.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/controllers/controller_email/email.go" />
+        <option value="$PROJECT_DIR$/bff/adapter/controllers/controller_email/email_test.go" />
+        <option value="$PROJECT_DIR$/bff/external/grpc/microservices.go" />
+        <option value="$PROJECT_DIR$/bff/external/grpc/grpc.go" />
+        <option value="$PROJECT_DIR$/bff/main.go" />
         <option value="$PROJECT_DIR$/bff/registry/registry.go" />
+        <option value="$PROJECT_DIR$/bff/external/web/handler.go" />
+        <option value="$PROJECT_DIR$/bff/external/config/config.go" />
       </list>
     </option>
   </component>
@@ -152,6 +194,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,22 +207,10 @@
               <item name="go-bff" type="462c0819:PsiDirectoryNode" />
               <item name="bff" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="bff" type="462c0819:PsiDirectoryNode" />
-              <item name="registry" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-bff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-bff" type="462c0819:PsiDirectoryNode" />
-              <item name="email" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -189,21 +220,27 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552221681108" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552363854375" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bff/adapter/microservices/microservice_email" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/server1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/email/pb" />
-      <recent name="$PROJECT_DIR$/bff/adapter/microservices/microservice_email" />
+      <recent name="$PROJECT_DIR$/bff" />
+      <recent name="$PROJECT_DIR$/bff/external" />
+      <recent name="$PROJECT_DIR$/bff/external/config" />
+      <recent name="$PROJECT_DIR$/bff/domain/entities/entity_notify" />
+      <recent name="$PROJECT_DIR$/bff/adapter/gateways/api/email" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -218,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-bff/bff">
+  <component name="RunManager" selected="Go Build.go build go-bff/notify">
     <configuration name="go build go-bff/bff" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-bff" />
       <working_directory value="$PROJECT_DIR$" />
@@ -234,6 +271,15 @@
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$" />
       <package value="go-bff/email" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go-bff/notify" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-bff" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$" />
+      <package value="go-bff/notify" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -259,6 +305,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go-bff/notify" />
         <item itemvalue="Go Build.go build go-bff/bff" />
         <item itemvalue="Go Build.go build go-bff/email" />
         <item itemvalue="Go Test.TestFirst in go-bff/bff/domain/entities/entity_email" />
@@ -281,7 +328,10 @@
       <workItem from="1551918767333" duration="30330000" />
       <workItem from="1552037429498" duration="2020000" />
       <workItem from="1552219164478" duration="21000" />
-      <workItem from="1552219205532" duration="646000" />
+      <workItem from="1552219205532" duration="1431000" />
+      <workItem from="1552223025125" duration="662000" />
+      <workItem from="1552268740911" duration="10668000" />
+      <workItem from="1552358651596" duration="2088000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551854846885</created>
@@ -311,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552194795756</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="golangcli-lint">
+      <created>1552221737179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1552221737179</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -323,13 +380,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54791000" />
+    <option name="totallyTimeSpent" value="68994000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="852" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="852" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990403" visible="true" weight="0.16666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990403" visible="true" weight="0.19027181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -337,9 +394,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5009597" side_tool="true" weight="0.18093699" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32700136" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4084125" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32590234" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40764332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -347,7 +404,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32908705" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.43184295" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32908705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -356,7 +413,7 @@
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3723748" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,89 +423,14 @@
     <MESSAGE value="init" />
     <MESSAGE value="add unit test" />
     <MESSAGE value="refactor regstry" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor regstry" />
+    <MESSAGE value="golangcli-lint" />
+    <option name="LAST_COMMIT_MESSAGE" value="golangcli-lint" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/golang/mock@v1.1.1/gomock/matchers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/google.golang.org/appengine@v1.1.0/mail/mail_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_user/user_repository.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding>
-            <element signature="e#21#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/registry/interfaces/microservices.go" />
-    <entry file="file://$PROJECT_DIR$/bff/registry/interfaces/usecase.go" />
-    <entry file="file://$PROJECT_DIR$/bff/registry/interfaces/repository.go" />
-    <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_user/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding>
-            <element signature="e#22#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/registry/repositories.go" />
-    <entry file="file://$PROJECT_DIR$/bff/registry/usecases.go" />
-    <entry file="file://$PROJECT_DIR$/bff/registry/microservices.go" />
-    <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/mock/mock_email.go" />
-    <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_email/email_test.go" />
-    <entry file="file://$PROJECT_DIR$/bff/external/microservices/microservices.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#23#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/repositories/repository_user/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#25#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/_build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.12/libexec/src/os/signal/signal.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/go/pkg/mod/github.com/gorilla/mux@v1.7.0/route.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -464,56 +446,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_email/email_test.go" />
-    <entry file="file://$PROJECT_DIR$/go.mod">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go.sum">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/transports/transport_user/user.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email_test.go" />
-    <entry file="file://$PROJECT_DIR$/email/pb/email.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/email/pb/email_test.go" />
-    <entry file="file://$PROJECT_DIR$/_test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/repositories/repository_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#26#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/go/1.12/libexec/src/builtin/builtin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -529,23 +463,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/email/pb/mock_pb/mock_email.go" />
-    <entry file="file://$PROJECT_DIR$/email/pb/email.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/application/interactors/interactor_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#26#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/go/pkg/mod/github.com/go-kit/kit@v0.8.0/endpoint/endpoint.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -553,21 +470,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/mock_microservice_email/mock_email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bff/application/interactors/interactor_email/email_test.go" />
-    <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_email/mock_usecase_email/mock_email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/go/pkg/mod/github.com/golang/mock@v1.1.1/gomock/controller.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -576,75 +479,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_email/mock_entity_email/mock_email_repository.go" />
-    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_email/email_repository.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_mockgen.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/transports/transport_email/email_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#23#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bff/domain/entities/model.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/transports/transport_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#25#278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/external/web/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          <folding>
-            <element signature="e#13#259#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/email.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -655,32 +493,351 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bff/main.go">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="234">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/application/interactors/interactor_user/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_user/user_repository.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_user/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_email/email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_profile/profile_repository.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/microservices/microservice_email/mock_microservice_email/mock_email.go" />
+    <entry file="file://$PROJECT_DIR$/bff/adapter/controllers/controller_user/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#14#439#0" expanded="true" />
+            <element signature="e#25#204#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/email/main.go">
+    <entry file="file://$PROJECT_DIR$/notify/pb/email.pb.go" />
+    <entry file="file://$PROJECT_DIR$/notify/_build.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_profile/profile.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_email/email_repository.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/gateways/db/db_email/email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_notify/mock_entity_notify/mock_notify_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/gateways/db/db_profile/profile.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/gateways/db/db_user/user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
-            <element signature="e#14#122#0" expanded="true" />
+            <element signature="e#17#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/domain/entities/entity_notify/notify_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#28#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/gateways/api/api_notify/notify.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_email/mock_usecase_email/mock_email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_mockgen.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go.sum">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go.mod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go-bff.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notify/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#14#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/external/grpc/connect.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#23#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notify/pb/notify.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notify/pb/notify.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/controllers/controller_email/email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/adapter/controllers/controller_email/email_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/application/interactors/interactor_email/email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#26#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/application/usecase/usecase_email/email.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#23#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bff/registry/registry.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="324">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bff/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding>
+            <element signature="e#14#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/external/web/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bff/external/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Bundled Protobuf Distribution</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>go-bff</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

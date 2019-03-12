@@ -1,4 +1,4 @@
-package repository_profile
+package db_profile
 
 import (
 	"github.com/jinzhu/gorm"

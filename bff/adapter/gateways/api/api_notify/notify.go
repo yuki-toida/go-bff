@@ -1,24 +1,20 @@
-package microservice_email
+package api_notify
 
 import (
 	"context"
 	"github.com/go-kit/kit/endpoint"
 	grpctransport "github.com/go-kit/kit/transport/grpc"
-	"go-bff/email/pb"
+	"go-bff/bff/domain/entities/entity_notify"
+	"go-bff/notify/pb"
 	"google.golang.org/grpc"
 )
-
-type Service interface {
-	Build(ctx context.Context, request *pb.BuildRequest) (*pb.BuildResponse, error)
-	Reverse(ctx context.Context, request *pb.ReverseRequest) (*pb.ReverseResponse, error)
-}
 
 type service struct {
 	build   endpoint.Endpoint
 	reverse endpoint.Endpoint
 }
 
-func New(conn *grpc.ClientConn) Service {
+func New(conn *grpc.ClientConn) entity_notify.Service {
 	return &service{
 		build: grpctransport.NewClient(
 			conn,

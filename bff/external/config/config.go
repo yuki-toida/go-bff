@@ -28,7 +28,7 @@ type Config struct {
 		Port     string `mapstructure:"port"`
 		Name     string `mapstructure:"name"`
 	}
-	EmailService struct {
+	NotifyService struct {
 		Host string `mapstructure:"host"`
 		Port string `mapstructure:"port"`
 	}

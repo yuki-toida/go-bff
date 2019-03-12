@@ -1,4 +1,4 @@
-package transport_user
+package controller_user
 
 import (
 	"context"

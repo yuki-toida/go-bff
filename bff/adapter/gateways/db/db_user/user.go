@@ -1,9 +1,9 @@
-package repository_user
+package db_user
 
 import (
 	"github.com/jinzhu/gorm"
-	"go-bff/bff/adapter/repositories/repository_email"
-	"go-bff/bff/adapter/repositories/repository_profile"
+	"go-bff/bff/adapter/gateways/db/db_email"
+	"go-bff/bff/adapter/gateways/db/db_profile"
 	"go-bff/bff/domain/entities"
 	"go-bff/bff/domain/entities/entity_email"
 	"go-bff/bff/domain/entities/entity_profile"
@@ -12,9 +12,9 @@ import (
 
 type User struct {
 	entities.Model
-	Profile   repository_profile.Profile
+	Profile   db_profile.Profile
 	ProfileID uint64 `gorm:"not null"`
-	Emails    []repository_email.Email
+	Emails    []db_email.Email
 }
 
 type repository struct {
@@ -63,10 +63,10 @@ func (r *repository) Find() ([]entity_user.User, error) {
 	for i, u := range dbUsers {
 		emails := make([]entity_email.Email, len(u.Emails))
 		for j, e := range u.Emails {
-			emails[j] = *repository_email.ToEntity(&e)
+			emails[j] = *db_email.ToEntity(&e)
 		}
 		users[i] = *ToEntity(&u)
-		users[i].Profile = repository_profile.ToEntity(&u.Profile)
+		users[i].Profile = db_profile.ToEntity(&u.Profile)
 		users[i].Emails = emails
 	}
 	return users, nil
@@ -80,11 +80,11 @@ func (r *repository) First(userID uint64) (*entity_user.User, error) {
 
 	emails := make([]entity_email.Email, len(dbUser.Emails))
 	for i, v := range dbUser.Emails {
-		emails[i] = *repository_email.ToEntity(&v)
+		emails[i] = *db_email.ToEntity(&v)
 	}
 
 	user := ToEntity(dbUser)
-	user.Profile = repository_profile.ToEntity(&dbUser.Profile)
+	user.Profile = db_profile.ToEntity(&dbUser.Profile)
 	user.Emails = emails
 	return user, nil
 }

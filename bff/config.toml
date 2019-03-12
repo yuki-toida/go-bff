@@ -5,6 +5,6 @@ host = "127.0.0.1"
 port = "13306"
 name = "test_db"
 
-[EmailService]
+[NotifyService]
 host = "localhost"
 port = "8081"

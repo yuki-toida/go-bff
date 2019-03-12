@@ -1,4 +1,4 @@
-package microservices
+package grpc
 
 import (
 	"fmt"

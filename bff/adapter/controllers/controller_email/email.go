@@ -1,4 +1,4 @@
-package transport_email
+package controller_email
 
 import (
 	"context"
@@ -6,14 +6,12 @@ import (
 	"errors"
 	"github.com/go-kit/kit/endpoint"
 	"github.com/gorilla/mux"
-	"go-bff/bff/adapter/microservices/microservice_email"
 	"go-bff/bff/application/usecase/usecase_email"
-	"go-bff/email/pb"
 	"net/http"
 	"strconv"
 )
 
-func MakeFirstEndpoint(u usecase_email.UseCase, es microservice_email.Service, ctx context.Context) endpoint.Endpoint {
+func MakeFirstEndpoint(u usecase_email.UseCase) endpoint.Endpoint {
 	return func(_ context.Context, request interface{}) (interface{}, error) {
 		req := request.(string)
 		emailID, _ := strconv.Atoi(req)
@@ -21,13 +19,6 @@ func MakeFirstEndpoint(u usecase_email.UseCase, es microservice_email.Service, c
 		if err != nil {
 			return nil, err
 		}
-
-		res, err := es.Reverse(ctx, &pb.ReverseRequest{Email: email.Email})
-		if err != nil {
-			return nil, err
-		}
-		email.Email = res.EmailAddress
-
 		return email, nil
 	}
 }
@@ -41,17 +32,11 @@ func DecodeFirstRequest(_ context.Context, r *http.Request) (interface{}, error)
 	return emailID, nil
 }
 
-func MakeUpdateEndpoint(u usecase_email.UseCase, es microservice_email.Service, ctx context.Context) endpoint.Endpoint {
+func MakeUpdateEndpoint(u usecase_email.UseCase) endpoint.Endpoint {
 	return func(_ context.Context, request interface{}) (interface{}, error) {
 		req := request.(updateRequest)
-
-		res, err := es.Build(ctx, &pb.BuildRequest{Email: req.Email})
-		if err != nil {
-			return nil, err
-		}
-
 		emailID, _ := strconv.Atoi(req.ID)
-		email, err := u.Update(uint64(emailID), res.EmailAddress)
+		email, err := u.Update(uint64(emailID), req.Email)
 		if err != nil {
 			return nil, err
 		}

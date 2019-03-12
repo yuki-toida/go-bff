@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/go-kit/kit/log"
-	"go-bff/email/pb"
+	"go-bff/notify/pb"
 	"google.golang.org/grpc"
 	"net"
 	"os"

@@ -1,4 +1,4 @@
-package repository_email
+package db_email
 
 import (
 	"github.com/jinzhu/gorm"

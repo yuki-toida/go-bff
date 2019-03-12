@@ -3,10 +3,10 @@ package registry
 import (
 	"context"
 	"github.com/jinzhu/gorm"
-	"go-bff/bff/adapter/microservices/microservice_email"
-	"go-bff/bff/adapter/repositories/repository_email"
-	"go-bff/bff/adapter/repositories/repository_profile"
-	"go-bff/bff/adapter/repositories/repository_user"
+	"go-bff/bff/adapter/gateways/api/api_notify"
+	"go-bff/bff/adapter/gateways/db/db_email"
+	"go-bff/bff/adapter/gateways/db/db_profile"
+	"go-bff/bff/adapter/gateways/db/db_user"
 	"go-bff/bff/application/interactors/interactor_email"
 	"go-bff/bff/application/interactors/interactor_user"
 	"go-bff/bff/application/usecase/usecase_email"
@@ -15,33 +15,19 @@ import (
 )
 
 type Registry struct {
-	Context       context.Context
-	UseCases      useCases
-	MicroServices microServices
+	UserUseCase  usecase_user.UseCase
+	EmailUseCase usecase_email.UseCase
 }
 
-type useCases struct {
-	User  usecase_user.UseCase
-	Email usecase_email.UseCase
-}
+func New(db *gorm.DB, ctx context.Context, notifyConn *grpc.ClientConn) *Registry {
+	ur := db_user.New(db)
+	pr := db_profile.New(db)
+	er := db_email.New(db)
 
-type microServices struct {
-	Email microservice_email.Service
-}
-
-func New(db *gorm.DB, ctx context.Context, emailConn *grpc.ClientConn) *Registry {
-	ur := repository_user.New(db)
-	pr := repository_profile.New(db)
-	er := repository_email.New(db)
+	ns := api_notify.New(notifyConn)
 
 	return &Registry{
-		Context: ctx,
-		UseCases: useCases{
-			User:  interactor_user.New(ur, pr, er),
-			Email: interactor_email.New(er),
-		},
-		MicroServices: microServices{
-			Email: microservice_email.New(emailConn),
-		},
+		UserUseCase:  interactor_user.New(ur, pr, er),
+		EmailUseCase: interactor_email.New(er, ns, ctx),
 	}
 }

@@ -4,11 +4,11 @@ import (
 	"context"
 	"github.com/go-kit/kit/log"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"go-bff/bff/adapter/repositories/repository_email"
-	"go-bff/bff/adapter/repositories/repository_profile"
-	"go-bff/bff/adapter/repositories/repository_user"
+	"go-bff/bff/adapter/gateways/db/db_email"
+	"go-bff/bff/adapter/gateways/db/db_profile"
+	"go-bff/bff/adapter/gateways/db/db_user"
 	"go-bff/bff/external/config"
-	"go-bff/bff/external/microservices"
+	"go-bff/bff/external/grpc"
 	"go-bff/bff/external/mysql"
 	"go-bff/bff/external/web"
 	"go-bff/bff/registry"
@@ -23,24 +23,24 @@ func main() {
 	defer db.Close()
 
 	db.LogMode(true)
-	db.DropTableIfExists(&repository_user.User{}, &repository_profile.Profile{}, &repository_email.Email{})
-	db.AutoMigrate(&repository_user.User{}, &repository_profile.Profile{}, &repository_email.Email{})
+	db.DropTableIfExists(&db_user.User{}, &db_profile.Profile{}, &db_email.Email{})
+	db.AutoMigrate(&db_user.User{}, &db_profile.Profile{}, &db_email.Email{})
 
 	for i := 1; i < 3; i++ {
-		p := repository_profile.Profile{Name: strconv.Itoa(i)}
+		p := db_profile.Profile{Name: strconv.Itoa(i)}
 		db.Create(&p)
-		u := repository_user.User{ProfileID: p.ID}
+		u := db_user.User{ProfileID: p.ID}
 		db.Create(&u)
 		for j := 1; j < 4; j++ {
 			e := strconv.Itoa(j) + "@hacobu.jp"
-			db.Create(&repository_email.Email{Email: e, UserID: u.ID})
+			db.Create(&db_email.Email{Email: e, UserID: u.ID})
 		}
 	}
 
-	emailConn := microservices.Connect(c.EmailService.Host, c.EmailService.Port)
-	defer emailConn.Close()
+	notifyConn := grpc.Connect(c.NotifyService.Host, c.NotifyService.Port)
+	defer notifyConn.Close()
 
-	reg := registry.New(db, context.Background(), emailConn)
+	reg := registry.New(db, context.Background(), notifyConn)
 	handler := web.Handle(reg)
 
 	port := ":8080"
